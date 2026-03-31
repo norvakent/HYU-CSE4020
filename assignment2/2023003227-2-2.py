@@ -29,8 +29,8 @@ def main():
     if not window:
         glfw.terminate()
         return
-    glfw.make_context_current(window)
 
+    glfw.make_context_current(window)
     glfw.swap_interval(1)
 
     while not glfw.window_should_close(window):
