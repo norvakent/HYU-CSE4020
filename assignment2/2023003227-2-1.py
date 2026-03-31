@@ -14,6 +14,9 @@ def render():
 
 def key_callback(window, key, scancode, action, mods):
     global shape_type
+    
+    if action in (glfw.REPEAT, glfw.RELEASE):
+        return
 
     if key==glfw.KEY_1:
         shape_type = GL_POINTS
