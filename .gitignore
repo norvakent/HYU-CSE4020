@@ -1,3 +1,4 @@
 *.zip
 .tool-versions
 practices
+.DS_Store
