@@ -2,3 +2,4 @@
 .tool-versions
 practices
 .DS_Store
+*/__pycache__
