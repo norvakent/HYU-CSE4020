@@ -23,6 +23,7 @@ def render():
 
     # blue base drawing
     glPushMatrix()
+    drawFrame()
     glScalef(.2, .2, .2)
     glColor3ub(0, 0, 255)
     drawBox()
@@ -35,11 +36,26 @@ def render():
 
     # red arm drawing
     glPushMatrix()
+    drawFrame()
     glScalef(.5, .1, .1)
     glColor3ub(255, 0, 0)
     drawBox()
     glPopMatrix()
 
+    # green arm transformation
+    glPushMatrix()
+    glTranslatef(.5, 0, .01)
+    glRotatef(t*(180/np.pi), 0, 0, 1)
+
+    # green arm drawing
+    glPushMatrix()
+    drawFrame()
+    glScalef(.2, .2, .2)
+    glColor3ub(0, 255, 0)
+    drawBox()
+    glPopMatrix()
+
+    glPopMatrix()
     glPopMatrix()
     glPopMatrix()
 
